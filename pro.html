@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="pro.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CivicConnect - Citizen Government Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+
+<header class="navbar">
+
+    <div class="logo">
+        <i class="fa-solid fa-building-columns"></i>
+        <span>Civic<span class="logo-highlight">Connect</span></span>
+    </div>
+
+    <button class="menu-btn" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav id="navMenu">
+
+        <a href="#" class="nav-link active" onclick="showPage('home', this)">
+            <i class="fa-solid fa-house"></i>
+            Home
+        </a>
+
+        <a href="#" class="nav-link" onclick="showPage('projects', this)">
+            <i class="fa-solid fa-city"></i>
+            Projects
+        </a>
+
+        <a href="#" class="nav-link" onclick="showPage('petitions', this)">
+            <i class="fa-solid fa-file-signature"></i>
+            Petitions
+        </a>
+
+        <a href="#" class="nav-link" onclick="showPage('complaints', this)">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            Complaints
+        </a>
+
+        <a href="#" class="nav-link" onclick="showPage('updates', this)">
+            <i class="fa-solid fa-chart-line"></i>
+            Updates
+        </a>
+
+        <a href="#" class="nav-link" onclick="showPage('forum', this)">
+            <i class="fa-solid fa-comments"></i>
+            Forum
+        </a>
+
+    </nav>
+
+    <button class="login-btn" onclick="openLogin()">
+        <i class="fa-solid fa-user"></i>
+        Login
+    </button>
+
+</header>
+
+
+<main>
+
+<section id="home" class="page active-page">
+
+    <div class="hero">
+
+        <div class="hero-content">
+
+            <span class="hero-tag">
+                CITIZEN PARTICIPATION PLATFORM
+            </span>
+
+            <h1>
+                Your Voice.
+                <span>Your Verification.</span>
+                Your Government.
+            </h1>
+
+            <p>
+                A transparent platform where citizens can verify
+                government projects, raise petitions, submit complaints,
+                and track government action.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button class="primary-btn"
+                        onclick="showPageById('projects')">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    Verify Projects
+                </button>
+
+                <button class="secondary-btn"
+                        onclick="showPageById('complaints')">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    Submit Complaint
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-card">
+
+            <div class="government-icon">
+                <i class="fa-solid fa-building-columns"></i>
+            </div>
+
+            <h3>Government Project</h3>
+
+            <p>
+                Community Road Development
+            </p>
+
+            <div class="project-progress">
+                <div class="progress-header">
+                    <span>Official Progress</span>
+                    <strong>100%</strong>
+                </div>
+
+                <div class="progress-bar">
+                    <div style="width:100%"></div>
+                </div>
+            </div>
+
+            <div class="verification-warning">
+                <i class="fa-solid fa-circle-exclamation"></i>
+
+                <span>
+                    Citizens report that work may not match
+                    the official status.
+                </span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="stats">
+
+        <div class="stat-card">
+            <i class="fa-solid fa-city"></i>
+            <div>
+                <h2 id="projectCount">12</h2>
+                <p>Government Projects</p>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <i class="fa-solid fa-file-signature"></i>
+            <div>
+                <h2 id="petitionCount">8</h2>
+                <p>Active Petitions</p>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <div>
+                <h2 id="complaintCount">24</h2>
+                <p>Complaints</p>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <i class="fa-solid fa-check-circle"></i>
+            <div>
+                <h2>76%</h2>
+                <p>Resolved Issues</p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="section-heading">
+
+        <span>HOW IT WORKS</span>
+
+        <h2>
+            From Government Claim to Ground Reality
+        </h2>
+
+        <p>
+            Citizens help create a more transparent and accountable
+            system.
+        </p>
+
+    </div>
+
+
+    <div class="process-container">
+
+        <div class="process-card">
+
+            <div class="process-number">01</div>
+
+            <i class="fa-solid fa-landmark"></i>
+
+            <h3>Government Publishes</h3>
+
+            <p>
+                Government departments publish project details,
+                budgets, deadlines and official progress.
+            </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+            <div class="process-number">02</div>
+
+            <i class="fa-solid fa-camera"></i>
+
+            <h3>Citizens Verify</h3>
+
+            <p>
+                Citizens can upload photographs, location and
+                verification information.
+            </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+            <div class="process-number">03</div>
+
+            <i class="fa-solid fa-chart-simple"></i>
+
+            <h3>Issues Become Visible</h3>
+
+            <p>
+                Differences between official claims and citizen
+                reports become visible.
+            </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+            <div class="process-number">04</div>
+
+            <i class="fa-solid fa-arrow-up-right-dots"></i>
+
+            <h3>Authorities Respond</h3>
+
+            <p>
+                Complaints are routed to departments and progress
+                is publicly tracked.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="projects" class="page">
+
+    <div class="page-header">
+
+        <div>
+            <span>PROJECT VERIFICATION</span>
+
+            <h1>Government Projects</h1>
+
+            <p>
+                Check official project claims against ground reality.
+            </p>
+        </div>
+
+        <button class="primary-btn" onclick="openProjectModal()">
+            <i class="fa-solid fa-plus"></i>
+            Add Verification
+        </button>
+
+    </div>
+
+
+    <div id="projectsContainer" class="project-grid">
+
+    </div>
+
+</section>
+
+<section id="petitions" class="page">
+
+    <div class="page-header">
+
+        <div>
+            <span>CITIZEN VOICE</span>
+
+            <h1>Public Petitions</h1>
+
+            <p>
+                Support important issues in your community.
+            </p>
+
+        </div>
+
+        <button class="primary-btn" onclick="openPetitionModal()">
+            <i class="fa-solid fa-plus"></i>
+            Create Petition
+        </button>
+
+    </div>
+
+
+    <div class="petition-info">
+
+        <div>
+            <i class="fa-solid fa-arrow-trend-up"></i>
+
+            <div>
+                <h3>Popular petitions rise to the top</h3>
+
+                <p>
+                    Support issues that matter to your community.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div id="petitionsContainer" class="petition-grid">
+
+    </div>
+
+</section>
+ 
+
+<section id="complaints" class="page">
+
+    <div class="page-header">
+
+        <div>
+
+            <span>ACCOUNTABILITY</span>
+
+            <h1>Citizen Complaints</h1>
+
+            <p>
+                Report problems and track the response from authorities.
+            </p>
+
+        </div>
+
+        <button class="primary-btn" onclick="openComplaintModal()">
+
+            <i class="fa-solid fa-plus"></i>
+
+            New Complaint
+
+        </button>
+
+    </div>
+
+
+    <div class="complaint-layout">
+
+        <div class="complaint-form-card">
+
+            <h2>Submit a Complaint</h2>
+
+            <p>
+                Your complaint will automatically be assigned
+                to the appropriate department.
+            </p>
+
+            <form id="complaintForm">
+
+                <label>Complaint Title</label>
+
+                <input
+                    type="text"
+                    id="complaintTitle"
+                    placeholder="Example: Street light not working"
+                    required
+                >
+
+
+                <label>Category</label>
+
+                <select id="complaintCategory" required>
+
+                    <option value="">
+                        Select department
+                    </option>
+
+                    <option value="Roads & Transport">
+                        Roads & Transport
+                    </option>
+
+                    <option value="Electricity">
+                        Electricity
+                    </option>
+
+                    <option value="Water & Sanitation">
+                        Water & Sanitation
+                    </option>
+
+                    <option value="Public Works">
+                        Public Works
+                    </option>
+
+                    <option value="Waste Management">
+                        Waste Management
+                    </option>
+
+                    <option value="Other">
+                        Other
+                    </option>
+
+                </select>
+
+
+                <label>Location</label>
+
+                <input
+                    type="text"
+                    id="complaintLocation"
+                    placeholder="Enter location"
+                    required
+                >
+
+
+                <label>Description</label>
+
+                <textarea
+                    id="complaintDescription"
+                    placeholder="Describe the problem..."
+                    required
+                ></textarea>
+
+
+                <button class="primary-btn full-btn" type="submit">
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                    Submit Complaint
+
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <div>
+
+            <h2 class="sub-heading">
+                Recent Complaints
+            </h2>
+
+            <div id="complaintsContainer">
+
+                <!-- COMPLAINTS -->
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="updates" class="page">
+
+    <div class="page-header">
+
+        <div>
+
+            <span>TRANSPARENCY</span>
+
+            <h1>Department Updates</h1>
+
+            <p>
+                Follow the progress of complaints and government action.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="updates-layout">
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+
+                <div class="timeline-icon">
+                    <i class="fa-solid fa-file-circle-check"></i>
+                </div>
+
+                <div class="timeline-content">
+
+                    <span>Today • 10:30 AM</span>
+
+                    <h3>
+                        Complaint assigned to Roads & Transport
+                    </h3>
+
+                    <p>
+                        Complaint #CMP1024 has been assigned
+                        to the concerned department.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-icon">
+                    <i class="fa-solid fa-person-digging"></i>
+                </div>
+
+                <div class="timeline-content">
+
+                    <span>Yesterday • 3:15 PM</span>
+
+                    <h3>
+                        Inspection completed
+                    </h3>
+
+                    <p>
+                        Field officers inspected the reported
+                        location.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-icon">
+                    <i class="fa-solid fa-wrench"></i>
+                </div>
+
+                <div class="timeline-content">
+
+                    <span>2 days ago</span>
+
+                    <h3>
+                        Repair work scheduled
+                    </h3>
+
+                    <p>
+                        Repair work has been scheduled for the
+                        reported issue.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="escalation-card">
+
+            <i class="fa-solid fa-arrow-up-right-dots"></i>
+
+            <h2>Automatic Escalation</h2>
+
+            <p>
+                If a department fails to provide an update
+                before the deadline, the complaint can be
+                automatically escalated to a higher authority.
+            </p>
+
+            <div class="deadline">
+
+                <span>Example Deadline</span>
+
+                <strong>3 Days</strong>
+
+            </div>
+
+            <button class="secondary-btn">
+                Learn More
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section id="forum" class="page">
+
+    <div class="page-header">
+
+        <div>
+
+            <span>COMMUNITY DISCUSSION</span>
+
+            <h1>Citizen Forum</h1>
+
+            <p>
+                Discuss local issues and follow departmental responses.
+            </p>
+
+        </div>
+
+        <button class="primary-btn" onclick="openForumModal()">
+
+            <i class="fa-solid fa-plus"></i>
+
+            Start Discussion
+
+        </button>
+
+    </div>
+
+
+    <div class="forum-grid">
+
+        <div class="forum-card">
+
+            <div class="forum-top">
+
+                <span class="department-tag">
+                    Roads & Transport
+                </span>
+
+                <span>
+                    2 hours ago
+                </span>
+
+            </div>
+
+            <h3>
+                Road construction near Main Junction
+            </h3>
+
+            <p>
+                Citizens are discussing the progress and
+                quality of the ongoing road construction.
+            </p>
+
+            <div class="forum-bottom">
+
+                <span>
+                    <i class="fa-regular fa-comment"></i>
+                    28 replies
+                </span>
+
+                <button onclick="alert('Discussion opened!')">
+                    View Discussion
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="forum-card">
+
+            <div class="forum-top">
+
+                <span class="department-tag electricity">
+                    Electricity
+                </span>
+
+                <span>
+                    Yesterday
+                </span>
+
+            </div>
+
+            <h3>
+                Street lights not working
+            </h3>
+
+            <p>
+                Residents are discussing street-light problems
+                in Ward 12.
+            </p>
+
+            <div class="forum-bottom">
+
+                <span>
+                    <i class="fa-regular fa-comment"></i>
+                    17 replies
+                </span>
+
+                <button onclick="alert('Discussion opened!')">
+                    View Discussion
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="department-section">
+
+        <div class="section-heading">
+
+            <span>DEPARTMENTS</span>
+
+            <h2>
+                Complaint Routing
+            </h2>
+
+        </div>
+
+
+        <div class="department-grid">
+
+            <div class="department-card">
+
+                <i class="fa-solid fa-road"></i>
+
+                <h3>Roads & Transport</h3>
+
+                <p>
+                    Roads, bridges, traffic and transportation.
+                </p>
+
+                <span class="department-status">
+                    Active
+                </span>
+
+            </div>
+
+
+            <div class="department-card">
+
+                <i class="fa-solid fa-bolt"></i>
+
+                <h3>Electricity</h3>
+
+                <p>
+                    Street lights and public electricity.
+                </p>
+
+                <span class="department-status">
+                    Active
+                </span>
+
+            </div>
+
+
+            <div class="department-card">
+
+                <i class="fa-solid fa-droplet"></i>
+
+                <h3>Water & Sanitation</h3>
+
+                <p>
+                    Water supply, drainage and sanitation.
+                </p>
+
+                <span class="department-status">
+                    Active
+                </span>
+
+            </div>
+
+
+            <div class="department-card">
+
+                <i class="fa-solid fa-recycle"></i>
+
+                <h3>Waste Management</h3>
+
+                <p>
+                    Waste collection and cleanliness.
+                </p>
+
+                <span class="department-status">
+                    Active
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<div id="petitionModal" class="modal">
+
+    <div class="modal-box">
+
+        <button class="close-btn"
+                onclick="closeModal('petitionModal')">
+            ×
+        </button>
+
+        <h2>Create Petition</h2>
+
+        <p>
+            Raise an issue that deserves public attention.
+        </p>
+
+        <form id="petitionForm">
+
+            <label>Petition Title</label>
+
+            <input
+                type="text"
+                id="petitionTitle"
+                placeholder="Example: Improve road safety near school"
+                required
+            >
+
+            <label>Category</label>
+
+            <select id="petitionCategory">
+
+                <option>Roads</option>
+                <option>Education</option>
+                <option>Healthcare</option>
+                <option>Environment</option>
+                <option>Public Safety</option>
+                <option>Other</option>
+
+            </select>
+
+            <label>Description</label>
+
+            <textarea
+                id="petitionDescription"
+                placeholder="Explain the issue..."
+                required
+            ></textarea>
+
+            <button class="primary-btn full-btn">
+                Submit Petition
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<div id="projectModal" class="modal">
+
+    <div class="modal-box">
+
+        <button class="close-btn"
+                onclick="closeModal('projectModal')">
+            ×
+        </button>
+
+        <h2>Verify a Project</h2>
+
+        <p>
+            Submit your ground-level verification.
+        </p>
+
+        <form id="projectForm">
+
+            <label>Project Name</label>
+
+            <input
+                type="text"
+                id="verificationProject"
+                placeholder="project name"
+                required>
+                 <label>Verification Result</
+
+<select id="verificationResult">
+
+<option value="Verified">
+
+Work matches official
+
+claim
+
+</option>
+
+<option value="Concern">
+
+Work does not match
+
+official claim
+
+</option>
+
+<option value="Incomplete">
+
+Work appears incomplete
+
+</option>
+
+</select>
+
+<label>Location</label>
+
+<input
+
+>
+
+type="text"
+
+id="verificationLocation"
+
+placeholder="Location"
+
+required
+
+<label>Upload Photo</label>
+
+<input
+
+type="file"
+
+id="verificationPhoto"
+
+accept="image/*"
+
+>
+
+<button
+
+type="button"
+
+class="location-btn"
+
+onclick="getLocation()">
+<i class="fa-solid
+
+fa-location-crosshairs"></i>
+
+Use My Location
+
+</button>
+
+<p id="locationText"
+
+class="location-text">
+
+Location not selected.
+
+</p>
+
+<button class="primary-btn
+
+full-btn">
+
+Submit Verification
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+
+<div id="loginModal" class="modal">
+
+<div class="modal-box small-modal">
+
+<button class="close-btn"
+
+onclick="closeModal('loginModal')">
+X
+</button>
+
+<h2>Login</h2>
+
+<p>
+
+Select your portal.
+
+</p>
+
+<button class="role-btn">
+    <i class="fa-solid fa-user"></i>
+
+Citizen Login
+
+</button>
+
+<button class="role-btn">
+
+<i class="fa-solid
+
+fa-building-columns"></i>
+
+Department Login
+
+</button>
+
+</div>
+
+</div>
+
+
+<div id="forumModal" class="modal">
+
+<div class="modal-box">
+
+<button class="close-btn"
+
+onclick="closeModal('forumModal')">
+
+X
+
+</button>
+
+<h2>Start Discussion</h2>
+
+<form>
+
+<label>Discussion Title</label>
+
+<input
+
+type="text"
+
+placeholder="What do you
+
+>
+
+want to discuss?"
+
+<label>Department</label>
+
+<select>
+    <option>Roads & Transport</
+
+<option>Electricity</option>
+
+<option>Water & Sanitation</
+
+option>
+
+<option>Public Works</
+
+option>
+
+<option>Other</option>
+
+</select>
+
+<label>Your Message</label>
+
+<textarea
+
+placeholder="Write your
+
+message..."
+
+></textarea>
+
+<button
+
+type="button"
+
+class="primary-btn full-btn"
+
+onclick="submitForum()">
+
+Post Discussion
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+
+
+<div id="toast" class="toast">
+
+<i class="fa-solid fa-circle-check"></i>
+
+<span id="toastMessage">
+
+Success!
+
+</span>
+</div>
+
+
+
+<footer>
+
+<div class="footer-logo">
+
+<i class="fa-solid
+
+fa-building-columns"></i>
+
+CivicConnect
+
+</div>
+
+<p>
+
+Building transparency through citizen participation.
+
+</p>
+
+<p class="copyright">
+
+©2026 CivicConnect Prototype
+
+</p>
+
+</footer>
+
+<script src="pro.js"></script>
+
+</body>
+
+</html>
