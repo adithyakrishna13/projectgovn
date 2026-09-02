@@ -1,10 +1,7 @@
 
 function showPage(pageId, clickedLink) {
-
-    // Prevent normal # navigation
     event.preventDefault();
 
-    // Hide every page
     const pages = document.querySelectorAll(".page");
 
     pages.forEach(function(page) {
@@ -12,15 +9,13 @@ function showPage(pageId, clickedLink) {
     });
 
 
-    // Show selected page
+
     const selectedPage = document.getElementById(pageId);
 
     if (selectedPage) {
         selectedPage.classList.add("active-page");
     }
 
-
-    // Remove active class from navbar
     const links = document.querySelectorAll(".nav-link");
 
     links.forEach(function(link) {
@@ -28,17 +23,12 @@ function showPage(pageId, clickedLink) {
     });
 
 
-    // Add active class to clicked link
     if (clickedLink) {
         clickedLink.classList.add("active");
     }
 
-
-    // Close mobile menu
     document.getElementById("navMenu").classList.remove("show");
 
-
-    // Scroll to top
     window.scrollTo({
         top: 0,
         behavior: "smooth"
@@ -58,7 +48,6 @@ function showPageById(pageId) {
     document.getElementById(pageId).classList.add("active-page");
 
 
-    // Update navbar
     const links = document.querySelectorAll(".nav-link");
 
     links.forEach(function(link) {
@@ -570,7 +559,6 @@ function displayPetitions() {
     container.innerHTML = "";
 
 
-    // Sort petitions by votes
     petitions.sort(function(a, b) {
 
         return b.votes - a.votes;
